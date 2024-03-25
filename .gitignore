@@ -1,0 +1,5 @@
+# Ignore installed tmux plugins
+tmux/.config/tmux/plugins
+# !tmux/.config/tmux/plugins/install-plugins.sh
+
+**/lazy-lock.json

@@ -29,11 +29,11 @@ return {
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
 
         -- Gitsigns
-        ['<leader>G'] = { name = '[G]it', _ = 'which_key_ignore' },
-        ['<leader>Gb'] = { name = '[B]uffer', _ = 'which_key_ignore' },
-        ['<leader>Gh'] = { name = '[H]unk', _ = 'which_key_ignore' },
-        ['<leader>Gd'] = { name = '[D]iff', _ = 'which_key_ignore' },
-        ['<leader>Gt'] = { name = '[T]oggle', _ = 'which_key_ignore' },
+        ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
+        ['<leader>gb'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+        ['<leader>gh'] = { name = '[H]unk', _ = 'which_key_ignore' },
+        ['<leader>gd'] = { name = '[D]iff', _ = 'which_key_ignore' },
+        ['<leader>gt'] = { name = '[T]oggle', _ = 'which_key_ignore' },
       }
     end,
   },

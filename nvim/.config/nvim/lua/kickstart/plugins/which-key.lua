@@ -32,7 +32,7 @@ return {
         ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
         ['<leader>gb'] = { name = '[B]uffer', _ = 'which_key_ignore' },
         ['<leader>gh'] = { name = '[H]unk', _ = 'which_key_ignore' },
-        ['<leader>gd'] = { name = '[D]iff', _ = 'which_key_ignore' },
+        ['<leader>gi'] = { name = '[D]iff', _ = 'which_key_ignore' },
         ['<leader>gt'] = { name = '[T]oggle', _ = 'which_key_ignore' },
       }
     end,

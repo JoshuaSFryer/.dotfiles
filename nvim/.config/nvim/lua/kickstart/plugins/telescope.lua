@@ -88,6 +88,8 @@ return {
 
       vim.keymap.set('n', '<leader>sH', ':ClangdSwitchSourceHeader<CR>', { desc = '[S]wap between [H]eader and Source Files' })
 
+      vim.keymap.set('n', '<leader>gls', ':Telescope git_status<CR>', { desc = '[L]i[S]t git-modified files' })
+
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to telescope to change theme, layout, etc.

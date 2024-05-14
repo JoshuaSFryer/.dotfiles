@@ -126,3 +126,10 @@ bind -m vi-insert 'Control-l: clear-screen'
 . "$HOME/.cargo/env"
 
 export PATH=$HOME/.local/bin:$PATH
+
+# Automatically launch a new tmux session
+# https://unix.stackexchange.com/a/113768
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+

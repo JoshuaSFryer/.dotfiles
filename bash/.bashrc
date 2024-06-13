@@ -118,7 +118,11 @@ fi
 
 # Bind $WINHOME to current user's Windows home directory
 # (i.e. /mnt/c/Users/joshua.fryer)
-export WINHOME=$(wslpath $(cmd.exe /C "echo %USERPROFILE%" 2>/dev/null | tr -d '\r'))
+# TODO: This successfully prevents Fedora from trying to export WINHOME.
+# Need to make sure that it still allows WSL to correctly export.
+if systemd-detect-virt | grep -q 'wsl'; then
+	export WINHOME=$(wslpath $(cmd.exe /C "echo %USERPROFILE%" 2>/dev/null | tr -d '\r'))
+fi
 
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'

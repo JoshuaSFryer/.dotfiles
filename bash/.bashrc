@@ -121,7 +121,8 @@ fi
 # TODO: This successfully prevents Fedora from trying to export WINHOME.
 # Need to make sure that it still allows WSL to correctly export.
 if systemd-detect-virt | grep -q 'wsl'; then
-	export WINHOME=$(wslpath $(cmd.exe /C "echo %USERPROFILE%" 2>/dev/null | tr -d '\r'))
+	windows_home=$(cmd.exe /C "echo %USERPROFILE%" 2>/dev/null | tr -d '\r')
+	export WINHOME=$(wslpath -u "$windows_home")
 fi
 
 set -o vi

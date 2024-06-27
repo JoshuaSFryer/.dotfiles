@@ -134,7 +134,11 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Automatically launch a new tmux session
 # https://unix.stackexchange.com/a/113768
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	# Use this line to connect to tmux session named "main", or create one if it doesn't exist
+	# The idea here is to not spawn endless tmux sessions every time you open a new terminal
+	tmux new-session -A -s main
 
+	# Use this line instead if you just want to create a new session every time
+	# exec tmux
+fi

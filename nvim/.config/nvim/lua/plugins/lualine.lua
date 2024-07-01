@@ -4,7 +4,7 @@ return {
     opts = function(_, opts)
       opts.sections.lualine_z = {
         function()
-          return "HI"
+          return ""
         end,
       }
     end,
